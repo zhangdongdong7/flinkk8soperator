@@ -26,3 +26,4 @@ ENV PATH="/artifacts:${PATH}"
 FROM alpine:3.10
 COPY --from=builder /artifacts /bin
 CMD ["flinkoperator"]
+
