@@ -22,7 +22,7 @@ jobs:
         with:
           publish: true
           imageName: doubledong/flinkk8soperator
-          tag: v1
+          tag: v2
           dockerHubUser: ${{ secrets.DOCKER_USERNAME }}
           dockerHubPassword: ${{ secrets.DOCKER_PASSWORD }}
           platform: linux/amd64,linux/arm64
