@@ -12,7 +12,7 @@ on:
 jobs:
   gradle-jdk:
     runs-on: ubuntu-latest
-    name: builx flink-scala
+    name: builx flinkk8soperator
     steps:
       # https://github.com/marketplace/actions/customizable-docker-buildx
       - name: Checkout master
@@ -21,8 +21,8 @@ jobs:
         uses: ilteoood/docker_buildx@master
         with:
           publish: true
-          imageName: doubledong/flink
-          tag: 1.10-scala_2.12
+          imageName: doubledong/flinkk8soperator
+          tag: v1
           dockerHubUser: ${{ secrets.DOCKER_USERNAME }}
           dockerHubPassword: ${{ secrets.DOCKER_PASSWORD }}
           platform: linux/amd64,linux/arm64
