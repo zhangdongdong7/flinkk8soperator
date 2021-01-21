@@ -13,7 +13,7 @@ compile: generate
 
 .PHONY: linux_compile
 linux_compile: generate
-	GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o /artifacts/flinkoperator ./cmd/flinkk8soperator/main.go
+	GOOS=linux CGO_ENABLED=0 go build -o /artifacts/flinkoperator ./cmd/flinkk8soperator/main.go
 
 gen-config:
 	which pflags || (go get github.com/lyft/flytestdlib/cli/pflags)
